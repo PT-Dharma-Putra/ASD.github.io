@@ -1,0 +1,51 @@
+---
+const machines = [
+  { id: 1, label: "CNC Router Machine", image: "/images/mesin/1.png" },
+  { id: 2, label: "Automatic Edge Banding", image: "/images/mesin/2.png" },
+  { id: 3, label: "Sliding Table Panel Saw", image: "/images/mesin/3.png" },
+  { id: 4, label: "Pneumatic Cold Press", image: "/images/mesin/4.png" },
+  { id: 5, label: "Spindle Shaper Machine", image: "/images/mesin/5.png" },
+  { id: 6, label: "Laser Cutting & Engraving", image: "/images/mesin/6.png" }
+];
+---
+
+<section id="machinery" class="py-24 bg-white relative overflow-hidden">
+  <!-- Decorative Background Watermark -->
+  <div class="absolute -right-48 -bottom-48 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="absolute -left-48 -top-48 w-96 h-96 bg-accent-orange/5 rounded-full blur-3xl pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto px-6 relative z-10">
+    <!-- Header -->
+    <div class="mb-16 text-center max-w-3xl mx-auto">
+      <span class="text-primary font-bold tracking-[0.2em] uppercase text-sm mb-3 block">
+        Production Facility
+      </span>
+      <h2 class="font-display text-4xl sm:text-5xl text-secondary font-bold mb-6 leading-tight">
+        MESIN & FASILITAS KAMI
+      </h2>
+      <div class="w-20 h-1 bg-primary mx-auto"></div>
+    </div>
+
+    <!-- Grid Layout -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {
+        machines.map((machine) => (
+          <div class="group relative rounded-2xl overflow-hidden aspect-[4/3] bg-slate-50 border border-slate-100 shadow-sm hover:shadow-xl hover:border-primary/20 transition-all duration-500 hover-lift">
+            <img
+              src={machine.image}
+              alt={machine.label}
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+              loading="lazy"
+            />
+            <!-- Overlay Label -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-6">
+              <span class="bg-primary text-white text-xs font-bold uppercase tracking-wider px-4 py-2 rounded-lg shadow-md">
+                {machine.label}
+              </span>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

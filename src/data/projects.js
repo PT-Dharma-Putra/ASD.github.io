@@ -96,6 +96,25 @@ export const projectsData = [
     },
   },
   {
+    title: "Hermina Daan Mogot",
+    category: "Healthcare",
+    description: `The interior design of Hermina Hospital Daan Mogot is crafted with a focus on modern healthcare hospitality:
+    • Clean & Sterile Aesthetic: Uses premium, hospital-grade materials that meet strict hygienic standards without sacrificing warmth.
+    • Patient Comfort First: Ergonomic seating and optimized layouts in patient rooms and waiting areas to provide a calming environment.
+    • Efficient & Professional: Built to support healthcare professionals with smart space planning, durable furniture, and soothing ambient lighting.
+    
+    A perfect synergy of design and functionality that enhances both operational efficiency and the overall patient care experience.`,
+    image: "/images/project/HERMINA DAAN MOGOT/b285685c-9c56-4186-b242-d964386929c8.png",
+    slug: "hermina-daan-mogot",
+    folderName: "HERMINA DAAN MOGOT",
+    details: {
+      client: "Hermina Hospitals",
+      location: "Daan Mogot, Jakarta",
+      year: "2023",
+      service: "Interior & Furniture",
+    },
+  },
+  {
     title: "Kemenkes IKN",
     category: "Government",
     description: `The interior features a Modern State-of-the-Art Office concept:
