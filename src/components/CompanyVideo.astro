@@ -19,10 +19,11 @@
     class="max-w-[1920px] mx-auto w-full px-6 lg:px-12 relative z-10 grid lg:grid-cols-2 gap-12 items-center h-full py-20 lg:py-0"
   >
     <!-- Left Content -->
-    <div class="max-w-2xl lg:pl-12 order-2 lg:order-1">
+    <div class="max-w-2xl lg:pl-12 order-2 lg:order-1" data-scroll-reveal="fade-right">
       <div class="inline-block mb-6">
         <span
           class="py-2 px-4 border border-primary/30 rounded-full text-primary text-sm tracking-[0.2em] uppercase font-semibold bg-primary/5 backdrop-blur-sm"
+          data-i18n="video.badge"
         >
           Company Profile
         </span>
@@ -30,6 +31,7 @@
 
       <h2
         class="font-display text-5xl lg:text-7xl font-bold text-white mb-8 leading-[1.1]"
+        data-i18n-html="video.title"
       >
         Advanced <br />
         <span class="text-gradient-primary">Manufacturing</span>
@@ -41,6 +43,7 @@
 
       <p
         class="text-slate-300 text-lg lg:text-xl leading-relaxed mb-12 max-w-xl"
+        data-i18n-html="video.desc"
       >
         Powered by state-of-the-art <strong class="text-white"
           >CNC machinery</strong
@@ -69,8 +72,8 @@
             >
           </div>
           <div>
-            <p class="text-white font-bold">High-Precision Tech</p>
-            <p class="text-slate-400 text-sm">Automated CNC Systems</p>
+            <p class="text-white font-bold" data-i18n="video.f1Title">High-Precision Tech</p>
+            <p class="text-slate-400 text-sm" data-i18n="video.f1Sub">Automated CNC Systems</p>
           </div>
         </div>
         <div class="flex items-center gap-4">
@@ -96,8 +99,8 @@
             >
           </div>
           <div>
-            <p class="text-white font-bold">Production Facility</p>
-            <p class="text-slate-400 text-sm">Scale & Efficiency</p>
+            <p class="text-white font-bold" data-i18n="video.f2Title">Production Facility</p>
+            <p class="text-slate-400 text-sm" data-i18n="video.f2Sub">Scale & Efficiency</p>
           </div>
         </div>
       </div>
@@ -106,6 +109,7 @@
     <!-- Right Content: Video -->
     <div
       class="relative h-full w-full flex items-center justify-center lg:justify-end order-1 lg:order-2"
+      data-scroll-reveal="fade-left"
     >
       <div
         class="relative w-full max-w-3xl aspect-video rounded-tr-[4rem] rounded-bl-[4rem] overflow-hidden shadow-2xl border-2 border-white/10 group"

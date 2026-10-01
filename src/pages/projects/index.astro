@@ -42,24 +42,26 @@ const projects = projectsData.map((project) => {
 
   <main class="pt-20 pb-8">
     <div class="max-w-7xl mx-auto px-6">
-      <header class="mb-8 border-b border-primary/10 pb-12">
+      <header class="mb-8 border-b border-primary/10 pb-12" data-scroll-reveal="fade-up">
         <span
           class="text-primary font-bold tracking-[0.2em] uppercase text-sm mb-2 block"
+          data-i18n="portfolio.badge"
           >Portfolio</span
         >
         <h1
           class="font-display text-5xl md:text-6xl text-secondary font-bold mb-6 italic"
+          data-i18n="portfolio.title"
         >
           OUR PROJECTS
         </h1>
-        <p class="text-slate-500 max-w-2xl text-lg">
+        <p class="text-slate-500 max-w-2xl text-lg" data-i18n="portfolio.subtitle">
           A curated collection of our finest work across residential,
           commercial, and hospitality sectors. Each project is a testament to
           our commitment to quality and design excellence.
         </p>
       </header>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-scroll-stagger="100">
         {
           projects.map((project) => (
             <a
@@ -75,7 +77,10 @@ const projects = projectsData.map((project) => {
                 />
                 <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500" />
                 <div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent text-white translate-y-4 group-hover:translate-y-0 transition-transform">
-                  <p class="text-xs font-bold uppercase tracking-wider mb-1 text-primary">
+                  <p
+                    class="text-xs font-bold uppercase tracking-wider mb-1 text-primary"
+                    data-i18n={`category.${project.category.toLowerCase().replace(/[^a-z]/g, "")}`}
+                  >
                     {project.category}
                   </p>
                   <h3 class="font-display text-xl font-bold">
@@ -84,7 +89,10 @@ const projects = projectsData.map((project) => {
                 </div>
               </div>
               <div class="px-2">
-                <p class="text-sm text-slate-500 line-clamp-3">
+                <p
+                  class="text-sm text-slate-500 line-clamp-3"
+                  data-i18n={`projects.${project.slug}.desc`}
+                >
                   {project.description}
                 </p>
               </div>

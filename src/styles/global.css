@@ -89,3 +89,129 @@
     transform: translateY(-5px);
   }
 }
+
+/* ==========================================================================
+   SCROLL MOTION & REVEAL SYSTEM
+   ========================================================================== */
+
+/* Top Scroll Progress Indicator */
+#scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, #e4222e, #f97316, #e4222e);
+  background-size: 200% 100%;
+  z-index: 9999;
+  pointer-events: none;
+  transition: width 0.12s ease-out;
+}
+
+/* Floating Back To Top Button */
+#back-to-top-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 9999px;
+  background: rgba(15, 23, 42, 0.88);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 50;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(16px) scale(0.9);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#back-to-top-btn.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+#back-to-top-btn:hover {
+  background: #e4222e;
+  transform: translateY(-4px) scale(1.08);
+  box-shadow: 0 15px 30px -5px rgba(228, 34, 46, 0.45);
+}
+
+/* Base scroll reveal styles */
+[data-scroll-reveal],
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+[data-scroll-reveal="fade-up"],
+.scroll-reveal-up {
+  opacity: 0;
+  transform: translateY(36px);
+}
+
+[data-scroll-reveal="fade-down"],
+.scroll-reveal-down {
+  opacity: 0;
+  transform: translateY(-36px);
+}
+
+[data-scroll-reveal="fade-left"],
+.scroll-reveal-left {
+  opacity: 0;
+  transform: translateX(-40px);
+}
+
+[data-scroll-reveal="fade-right"],
+.scroll-reveal-right {
+  opacity: 0;
+  transform: translateX(40px);
+}
+
+[data-scroll-reveal="zoom-in"],
+.scroll-reveal-zoom {
+  opacity: 0;
+  transform: scale(0.92) translateY(20px);
+}
+
+/* Revealed State */
+[data-scroll-reveal].is-revealed,
+.scroll-reveal.is-revealed,
+.scroll-reveal-up.is-revealed,
+.scroll-reveal-down.is-revealed,
+.scroll-reveal-left.is-revealed,
+.scroll-reveal-right.is-revealed,
+.scroll-reveal-zoom.is-revealed,
+.reveal.active {
+  opacity: 1 !important;
+  transform: translate(0, 0) scale(1) !important;
+}
+
+/* Accessibility: respect user preference for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  [data-scroll-reveal],
+  .scroll-reveal,
+  .scroll-reveal-up,
+  .scroll-reveal-down,
+  .scroll-reveal-left,
+  .scroll-reveal-right,
+  .scroll-reveal-zoom,
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
