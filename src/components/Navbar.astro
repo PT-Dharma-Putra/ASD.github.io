@@ -27,40 +27,76 @@
     </div>
 
     <!-- Desktop Menu -->
-    <div class="hidden md:flex items-center gap-8">
+    <div class="hidden md:flex items-center gap-7">
       {
         [
-          { href: "/#home", text: "Home" },
-          { href: "/#about", text: "About" },
+          { href: "/#home", text: "Home", key: "nav.home" },
+          { href: "/#about", text: "About", key: "nav.about" },
           // { href: "/#subsidiaries", text: "Subsidiaries" },
-          { href: "/#services", text: "Services", external: false },
-          { href: "/#machinery", text: "Machinery", external: false },
-          { href: "/#projects", text: "Projects", external: false },
-          { href: "/#client", text: "Clients", external: false },
-          // { href: "/careers", text: "Careers" },
-          // {
-          //   href: "https://www.trackingorderdpsa.xyz/",
-          //   text: "Track Order",
-          //   external: true,
-          // },
+          {
+            href: "/#services",
+            text: "Services",
+            external: false,
+            key: "nav.services",
+          },
+          {
+            href: "/#machinery",
+            text: "Machinery",
+            external: false,
+            key: "nav.machinery",
+          },
+          {
+            href: "/#projects",
+            text: "Projects",
+            external: false,
+            key: "nav.projects",
+          },
+          {
+            href: "/#client",
+            text: "Clients",
+            external: false,
+            key: "nav.client",
+          },
         ].map((item) => (
           <a
             href={item.href}
             target={item.external ? "_blank" : undefined}
             class="relative text-[0.75rem] font-bold text-slate-600 hover:text-primary transition-colors uppercase tracking-[0.1em] group py-2"
           >
-            {item.text}
+            <span data-i18n={item.key}>{item.text}</span>
             <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full" />
           </a>
         ))
       }
       <a
-        href="https://wa.me/6281128507788"
+        href="https://wa.me/6281584142296"
         target="_blank"
         class="bg-primary text-white text-[0.7rem] font-bold uppercase tracking-widest px-6 py-2.5 rounded-full hover:bg-primary-dark hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 transform hover:-translate-y-0.5 active:scale-95"
       >
-        Contact Us
+        <span data-i18n="nav.contact">Contact Us</span>
       </a>
+
+      <!-- Language Selector (Desktop) -->
+      <div
+        class="flex items-center bg-slate-100/90 border border-slate-200/80 rounded-full p-0.5 text-[0.68rem] font-bold tracking-wider"
+      >
+        <button
+          type="button"
+          data-lang-btn="en"
+          class="px-2.5 py-1 rounded-full transition-all duration-200"
+          aria-label="Switch to English"
+        >
+          EN
+        </button>
+        <button
+          type="button"
+          data-lang-btn="id"
+          class="px-2.5 py-1 rounded-full transition-all duration-200"
+          aria-label="Ganti ke Bahasa Indonesia"
+        >
+          ID
+        </button>
+      </div>
     </div>
 
     <!-- Mobile Menu Button -->
@@ -95,12 +131,35 @@
           class="h-14 w-auto object-contain"
         />
       </a>
-      <button
-        id="close-menu"
-        class="p-2 text-secondary hover:text-primary transition-colors"
-      >
-        <span class="material-icons-outlined text-3xl">close</span>
-      </button>
+      <div class="flex items-center gap-3">
+        <!-- Language Switcher Mobile -->
+        <div
+          class="flex items-center bg-slate-100 border border-slate-200 rounded-full p-0.5 text-xs font-bold tracking-wider"
+        >
+          <button
+            type="button"
+            data-lang-btn="en"
+            class="px-3 py-1 rounded-full transition-all duration-200"
+            aria-label="Switch to English"
+          >
+            EN
+          </button>
+          <button
+            type="button"
+            data-lang-btn="id"
+            class="px-3 py-1 rounded-full transition-all duration-200"
+            aria-label="Ganti ke Bahasa Indonesia"
+          >
+            ID
+          </button>
+        </div>
+        <button
+          id="close-menu"
+          class="p-2 text-secondary hover:text-primary transition-colors"
+        >
+          <span class="material-icons-outlined text-3xl">close</span>
+        </button>
+      </div>
     </div>
 
     <!-- Mobile Scrollable Content -->
@@ -110,39 +169,41 @@
       <div class="space-y-6">
         {
           [
-            { href: "/#home", text: "Home", icon: "home" },
-            { href: "/#about", text: "About Us", icon: "info" },
+            { href: "/#home", text: "Home", icon: "home", key: "nav.home" },
+            {
+              href: "/#about",
+              text: "About Us",
+              icon: "info",
+              key: "nav.about",
+            },
             {
               href: "/#services",
               text: "Services",
               icon: "settings",
               external: false,
+              key: "nav.services",
             },
             {
               href: "/#machinery",
               text: "Machinery",
               icon: "precision_manufacturing",
               external: false,
+              key: "nav.machinery",
             },
             {
               href: "/#projects",
               text: "Projects",
               icon: "work",
               external: false,
+              key: "nav.projects",
             },
             {
               href: "/#client",
               text: "Clients",
               icon: "group",
               external: false,
+              key: "nav.client",
             },
-            // { href: "/careers", text: "Careers", icon: "person_search" },
-            // {
-            //   href: "https://www.trackingorderdpsa.xyz/",
-            //   text: "Track Order",
-            //   icon: "analytics",
-            //   external: true,
-            // },
           ].map((item, index) => (
             <a
               href={item.href}
@@ -150,7 +211,10 @@
               class="mobile-link flex items-center justify-between group translate-y-8 opacity-0 transition-all duration-700"
               style={`transition-delay: ${index * 50}ms;`}
             >
-              <span class="text-4xl font-display font-bold text-secondary group-hover:text-primary transition-colors">
+              <span
+                class="text-4xl font-display font-bold text-secondary group-hover:text-primary transition-colors"
+                data-i18n={item.key}
+              >
                 {item.text}
               </span>
               <div class="w-10 h-10 rounded-full border border-primary/20 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
@@ -169,11 +233,12 @@
         <div class="flex flex-col gap-4">
           <p
             class="text-[10px] uppercase tracking-[0.2em] text-slate-400 font-bold"
+            data-i18n="nav.reachOut"
           >
             Reach Out To Us
           </p>
           <a
-            href="https://wa.me/6281128507788"
+            href="https://wa.me/6281584142296"
             target="_blank"
             class="flex items-center gap-4 text-secondary font-bold text-xl group hover:text-primary transition-colors"
           >
@@ -182,7 +247,7 @@
             >
               <span class="material-icons-outlined">chat</span>
             </div>
-            0811-2700-5688
+            0815-8414-2296
           </a>
         </div>
       </div>
@@ -190,6 +255,8 @@
   </div>
 
   <script>
+    import "../utils/i18n.js";
+
     const menuToggle = document.getElementById("menu-toggle");
     const closeMenu = document.getElementById("close-menu");
     const mobileMenu = document.getElementById("mobile-menu");

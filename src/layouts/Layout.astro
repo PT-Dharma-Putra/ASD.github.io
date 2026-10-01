@@ -18,6 +18,14 @@ import "../styles/global.css";
     <link rel="icon" type="image/svg+xml" href="/images/logoASD.png" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <script is:inline>
+      try {
+        const savedLang = localStorage.getItem("asd_lang");
+        if (savedLang) {
+          document.documentElement.lang = savedLang;
+        }
+      } catch (e) {}
+    </script>
     <title>
       Abhijati Sahar Dharma | Scalable Interior & Furniture Solutions
     </title>
@@ -37,5 +45,9 @@ import "../styles/global.css";
     class="bg-background-light text-slate-800 font-sans selection:bg-primary/30 overflow-x-hidden"
   >
     <slot />
+    <script>
+      import "../utils/i18n.js";
+      import "../utils/scroll-motion.js";
+    </script>
   </body>
 </html>

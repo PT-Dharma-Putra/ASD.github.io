@@ -17,9 +17,12 @@
   <!-- Top spacer to account for the navbar height -->
   <div class="h-24 md:h-28"></div>
 
-  <div class="relative z-10 w-full max-w-5xl mx-auto text-center text-white px-6 my-auto">
+  <div
+    class="relative z-10 w-full max-w-5xl mx-auto text-center text-white px-6 my-auto"
+  >
     <h1
       class="font-display text-5xl md:text-7xl lg:text-8xl font-bold mb-6 tracking-tight leading-[1.1] animate-fade-in-up"
+      data-i18n-html="hero.title"
     >
       INTERIOR &<br />
       <span class="text-gradient-gold italic"> FURNITURE SOLUTION </span>
@@ -27,6 +30,7 @@
 
     <p
       class="text-lg md:text-2xl text-white/90 mb-10 max-w-2xl mx-auto font-light tracking-wide leading-relaxed animate-fade-in-up delay-200"
+      data-i18n="hero.subtitle"
     >
       Creating Spaces For Better Care
     </p>
@@ -38,78 +42,139 @@
         href="#projects"
         class="group relative overflow-hidden bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 tracking-[0.15em] uppercase text-[0.7rem]"
       >
-        <span class="relative z-10">Explore Portfolio</span>
+        <span class="relative z-10" data-i18n="hero.btnExplore"
+          >Explore Portfolio</span
+        >
         <div
           class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"
         >
         </div>
       </a>
       <a
-        href="https://wa.me/6281127005688"
+        href="https://wa.me/6281584142296"
         class="bg-primary hover:bg-primary/90 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 shadow-xl shadow-primary/20 hover:shadow-primary/40 transform hover:-translate-y-1 active:scale-95 tracking-[0.15em] uppercase text-[0.7rem]"
       >
-        Start a Project
+        <span data-i18n="hero.btnContact">Start a Project</span>
       </a>
     </div>
   </div>
 
   <!-- Bottom Features Bar -->
-  <div class="relative z-20 w-full bg-white border-t border-slate-100 shadow-2xl py-6 md:py-8 mt-12">
-    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-12 items-center">
+  <div
+    class="relative z-20 w-full bg-white border-t border-slate-100 shadow-2xl py-6 md:py-8 mt-12"
+  >
+    <div
+      class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-12 items-center"
+      data-scroll-stagger="150"
+    >
       <!-- Item 1 -->
-      <div class="flex items-center gap-4 justify-center md:justify-start group transition-all duration-300">
-        <div class="p-3 bg-primary/5 rounded-xl text-primary transition-all duration-300 group-hover:bg-primary group-hover:text-white shadow-sm">
-          <svg class="w-8 h-8 transition-transform duration-300 group-hover:scale-110" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-            <path d="M9 11l2 2 4-4"/>
-            <path d="M19 3h.01M22 6h.01M16 5h.01"/>
+      <div
+        class="flex items-center gap-4 justify-center md:justify-start group transition-all duration-300"
+      >
+        <div
+          class="p-3 bg-primary/5 rounded-xl text-primary transition-all duration-300 group-hover:bg-primary group-hover:text-white shadow-sm"
+        >
+          <svg
+            class="w-8 h-8 transition-transform duration-300 group-hover:scale-110"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            <path d="M9 11l2 2 4-4"></path>
+            <path d="M19 3h.01M22 6h.01M16 5h.01"></path>
           </svg>
         </div>
         <div>
-          <h3 class="font-display font-bold text-secondary text-sm md:text-base leading-tight uppercase tracking-wider">
+          <h3
+            class="font-display font-bold text-secondary text-sm md:text-base leading-tight uppercase tracking-wider"
+            data-i18n="hero.feature1Title"
+          >
             Hygienic & Durable
           </h3>
-          <p class="text-xs text-slate-500 font-light mt-0.5">
+          <p
+            class="text-xs text-slate-500 font-light mt-0.5"
+            data-i18n="hero.feature1Desc"
+          >
             Hospital-grade & long-lasting materials
           </p>
         </div>
       </div>
 
       <!-- Item 2 -->
-      <div class="flex items-center gap-4 justify-center group transition-all duration-300">
-        <div class="p-3 bg-primary/5 rounded-xl text-primary transition-all duration-300 group-hover:bg-primary group-hover:text-white shadow-sm">
-          <svg class="w-8 h-8 transition-transform duration-300 group-hover:scale-110" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10" stroke-dasharray="2 2" />
-            <circle cx="12" cy="5" r="2.5" fill="currentColor" />
-            <circle cx="6" cy="15.5" r="2.5" fill="currentColor" />
-            <circle cx="18" cy="15.5" r="2.5" fill="currentColor" />
-            <path d="M12 7.5v5M6.5 14l4-2M17.5 14l-4-2" />
+      <div
+        class="flex items-center gap-4 justify-center group transition-all duration-300"
+      >
+        <div
+          class="p-3 bg-primary/5 rounded-xl text-primary transition-all duration-300 group-hover:bg-primary group-hover:text-white shadow-sm"
+        >
+          <svg
+            class="w-8 h-8 transition-transform duration-300 group-hover:scale-110"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="12" r="10" stroke-dasharray="2 2"></circle>
+            <circle cx="12" cy="5" r="2.5" fill="currentColor"></circle>
+            <circle cx="6" cy="15.5" r="2.5" fill="currentColor"></circle>
+            <circle cx="18" cy="15.5" r="2.5" fill="currentColor"></circle>
+            <path d="M12 7.5v5M6.5 14l4-2M17.5 14l-4-2"></path>
           </svg>
         </div>
         <div>
-          <h3 class="font-display font-bold text-secondary text-sm md:text-base leading-tight uppercase tracking-wider">
+          <h3
+            class="font-display font-bold text-secondary text-sm md:text-base leading-tight uppercase tracking-wider"
+            data-i18n="hero.feature2Title"
+          >
             Ergonomic Design
           </h3>
-          <p class="text-xs text-slate-500 font-light mt-0.5">
+          <p
+            class="text-xs text-slate-500 font-light mt-0.5"
+            data-i18n="hero.feature2Desc"
+          >
             Optimized for comfort & function
           </p>
         </div>
       </div>
 
       <!-- Item 3 -->
-      <div class="flex items-center gap-4 justify-center md:justify-end group transition-all duration-300">
-        <div class="p-3 bg-primary/5 rounded-xl text-primary transition-all duration-300 group-hover:bg-primary group-hover:text-white shadow-sm">
-          <svg class="w-8 h-8 transition-transform duration-300 group-hover:scale-110" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="3" y="4" width="18" height="12" rx="2"/>
-            <path d="M2 18h20c1 0 2-.5 2-1v-1H0v1c0 .5 1 1 2 1z"/>
-            <path d="M15.5 6.5l2 2-7.5 7.5H8v-2l7.5-7.5z"/>
+      <div
+        class="flex items-center gap-4 justify-center md:justify-end group transition-all duration-300"
+      >
+        <div
+          class="p-3 bg-primary/5 rounded-xl text-primary transition-all duration-300 group-hover:bg-primary group-hover:text-white shadow-sm"
+        >
+          <svg
+            class="w-8 h-8 transition-transform duration-300 group-hover:scale-110"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <rect x="3" y="4" width="18" height="12" rx="2"></rect>
+            <path d="M2 18h20c1 0 2-.5 2-1v-1H0v1c0 .5 1 1 2 1z"></path>
+            <path d="M15.5 6.5l2 2-7.5 7.5H8v-2l7.5-7.5z"></path>
           </svg>
         </div>
         <div>
-          <h3 class="font-display font-bold text-secondary text-sm md:text-base leading-tight uppercase tracking-wider">
+          <h3
+            class="font-display font-bold text-secondary text-sm md:text-base leading-tight uppercase tracking-wider"
+            data-i18n="hero.feature3Title"
+          >
             Custom Solution
           </h3>
-          <p class="text-xs text-slate-500 font-light mt-0.5">
+          <p
+            class="text-xs text-slate-500 font-light mt-0.5"
+            data-i18n="hero.feature3Desc"
+          >
             Tailored to your specific space needs
           </p>
         </div>

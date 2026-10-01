@@ -43,22 +43,27 @@ const projectsWithImages = projectsData.map((project) => {
   <div class="max-w-7xl mx-auto px-6">
     <div
       class="mb-16 flex flex-col md:flex-row justify-between items-end gap-6 border-b border-primary/10 pb-12"
+      data-scroll-reveal="fade-up"
     >
       <div>
         <span
           class="text-primary font-bold tracking-[0.2em] uppercase text-sm mb-2 block"
+          data-i18n="projects.badge"
           >Our Portfolio</span
         >
-        <h2 class="font-display text-5xl text-secondary font-bold mb-4">
+        <h2
+          class="font-display text-5xl text-secondary font-bold mb-4"
+          data-i18n="projects.title"
+        >
           OUR PROJECTS
         </h2>
-        <p class="text-slate-500 max-w-xl">
+        <p class="text-slate-500 max-w-xl" data-i18n="projects.subtitle">
           Discover how Abhijati Sahar Dharma turns ideas into reality through a
           collection of completed projects.
         </p>
       </div>
     </div>
-    <div class="embla overflow-hidden" id="projects-carousel">
+    <div class="embla overflow-hidden" id="projects-carousel" data-scroll-reveal="fade-up">
       <div class="embla__container flex">
         {
           projectsWithImages.map((project) => (
@@ -76,7 +81,10 @@ const projectsWithImages = projectsData.map((project) => {
                   />
                   <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500" />
                   <div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent text-white translate-y-4 group-hover:translate-y-0 transition-transform">
-                    <p class="text-xs font-bold uppercase tracking-wider mb-1 text-accent-orange">
+                    <p
+                      class="text-xs font-bold uppercase tracking-wider mb-1 text-accent-orange"
+                      data-i18n={`category.${project.category.toLowerCase().replace(/[^a-z]/g, "")}`}
+                    >
                       {project.category}
                     </p>
                     <h3 class="font-display text-xl font-bold">
@@ -85,7 +93,10 @@ const projectsWithImages = projectsData.map((project) => {
                   </div>
                 </div>
                 <div class="px-2">
-                  <p class="text-sm text-slate-500 line-clamp-2">
+                  <p
+                    class="text-sm text-slate-500 line-clamp-2"
+                    data-i18n={`projects.${project.slug}.desc`}
+                  >
                     {project.description}
                   </p>
                 </div>

@@ -108,6 +108,7 @@ const { role } = Astro.props;
             <a
               href="/careers"
               class="text-slate-400 hover:text-primary transition-colors"
+              data-i18n="internshipDetail.careers"
               >Careers</a
             >
           </li>
@@ -116,6 +117,7 @@ const { role } = Astro.props;
             <a
               href="/careers/internships"
               class="text-slate-400 hover:text-primary transition-colors"
+              data-i18n="internshipDetail.internships"
               >Internships</a
             >
           </li>
@@ -139,6 +141,7 @@ const { role } = Astro.props;
         <section class="mb-16">
           <h2
             class="font-display text-xl font-bold text-secondary uppercase tracking-widest mb-8 border-b border-zinc-100 pb-4"
+            data-i18n="internships.qualifications"
           >
             Qualifications
           </h2>
@@ -161,10 +164,11 @@ const { role } = Astro.props;
         >
           <h2
             class="font-display text-xl font-bold text-secondary uppercase tracking-widest mb-6"
+            data-i18n="internshipDetail.howToApply"
           >
             How to Apply
           </h2>
-          <p class="text-slate-600 mb-8 leading-relaxed">
+          <p class="text-slate-600 mb-8 leading-relaxed" data-i18n="internshipDetail.applyText">
             Interested in joining our team? Please send your application via
             email with the following details:
           </p>
@@ -179,6 +183,7 @@ const { role } = Astro.props;
               <div>
                 <span
                   class="text-xs text-slate-400 uppercase font-bold tracking-widest block mb-1"
+                  data-i18n="internshipDetail.sendTo"
                   >Send to</span
                 >
                 <a
@@ -199,9 +204,10 @@ const { role } = Astro.props;
               <div>
                 <span
                   class="text-xs text-slate-400 uppercase font-bold tracking-widest block mb-1"
+                  data-i18n="internshipDetail.includeAssets"
                   >Include Assets</span
                 >
-                <span class="text-secondary font-bold"
+                <span class="text-secondary font-bold" data-i18n="internshipDetail.includeAssetsDesc"
                   >Please send your CV and portfolio (if available)</span
                 >
               </div>
@@ -213,7 +219,7 @@ const { role } = Astro.props;
               href={`mailto:hrga@dharmaputrainterior.co.id?subject=Internship Application - ${role.title}`}
               class="inline-flex items-center justify-center gap-3 bg-secondary text-white px-10 py-5 rounded-sm font-bold hover:bg-primary transition-all tracking-widest text-xs uppercase w-full sm:w-auto"
             >
-              Send Application Email
+              <span data-i18n="internships.sendEmailBtn">Send Application Email</span>
               <span class="material-icons-outlined">send</span>
             </a>
           </div>

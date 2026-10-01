@@ -91,20 +91,21 @@ const internshipRoles = [
   <main class="pt-24 pb-24">
     <div class="max-w-6xl mx-auto px-6">
       <!-- Header -->
-      <header class="mb-20 text-center max-w-4xl mx-auto">
+      <header class="mb-20 text-center max-w-4xl mx-auto" data-scroll-reveal="fade-up">
         <a
           href="/careers"
           class="text-primary font-bold text-xs uppercase tracking-[0.2em] flex items-center justify-center gap-2 mb-8 hover:opacity-70 transition-opacity"
         >
           <span class="material-icons-outlined text-sm">arrow_back</span>
-          Back to Careers
+          <span data-i18n="internships.back">Back to Careers</span>
         </a>
         <h1
           class="font-display text-4xl md:text-6xl font-bold text-secondary mb-6 leading-tight italic uppercase"
+          data-i18n-html="internships.title"
         >
           INTERNSHIP <span class="not-italic text-primary">PROGRAMS</span>
         </h1>
-        <p class="text-slate-500 text-lg leading-relaxed">
+        <p class="text-slate-500 text-lg leading-relaxed" data-i18n="internships.subtitle">
           Unlock your potential and gain industry-leading experience with our
           specialized internship tracks. We provide hands-on mentorship across
           various departments to jumpstart your career.
@@ -115,10 +116,11 @@ const internshipRoles = [
       <div class="embla relative group" id="internship-carousel">
         <div
           class="embla__container grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12 md:mb-24"
+          data-scroll-stagger="120"
         >
           {
             internshipRoles.map((role) => (
-              <div class="embla__slide min-w-0 flex-[0_0_100%] md:flex-none px-4 md:px-0">
+              <div class="embla__slide min-w-0 flex-[0_0_100%] md:flex-none px-4 md:px-0" data-scroll-reveal="fade-up">
                 <div class="bg-white border border-zinc-100 rounded-3xl p-8 md:p-12 shadow-sm hover:shadow-xl transition-shadow duration-500 flex flex-col h-full">
                   <div class="flex items-center gap-6 mb-8 pb-6 border-b border-zinc-50">
                     <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-primary">
@@ -132,7 +134,7 @@ const internshipRoles = [
                   </div>
 
                   <div class="flex-grow">
-                    <h3 class="text-xs font-bold text-primary uppercase tracking-widest mb-6">
+                    <h3 class="text-xs font-bold text-primary uppercase tracking-widest mb-6" data-i18n="internships.qualifications">
                       Qualifications
                     </h3>
                     <ul class="space-y-4 mb-10">
@@ -152,7 +154,7 @@ const internshipRoles = [
                       href={`mailto:hrga@dharmaputrainterior.co.id?subject=Internship Application - ${role.title}`}
                       class="inline-flex items-center justify-center gap-3 bg-secondary text-white w-full py-4 rounded-sm font-bold hover:bg-primary transition-all tracking-widest text-[10px] uppercase"
                     >
-                      Apply for this position
+                      <span data-i18n="internships.applyBtn">Apply for this position</span>
                       <span class="material-icons-outlined text-sm">email</span>
                     </a>
                   </div>
@@ -190,6 +192,7 @@ const internshipRoles = [
       <!-- Application Info -->
       <section
         class="bg-secondary rounded-[3rem] p-10 md:p-20 text-white relative overflow-hidden text-center"
+        data-scroll-reveal="fade-up"
       >
         <div
           class="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-bl-full -mr-32 -mt-32"
@@ -203,10 +206,11 @@ const internshipRoles = [
         <div class="relative z-10 max-w-2xl mx-auto">
           <h2
             class="font-display text-3xl md:text-5xl font-bold mb-8 uppercase italic"
+            data-i18n-html="internships.ctaTitle"
           >
             READY TO <span class="not-italic text-primary">APPLY?</span>
           </h2>
-          <p class="text-slate-300 mb-12 text-lg">
+          <p class="text-slate-300 mb-12 text-lg" data-i18n="internships.ctaDesc">
             Please send your updated CV and portfolio (if available) to our
             recruitment team. Make sure to specify the position you are applying
             for in the email subject.
@@ -218,6 +222,7 @@ const internshipRoles = [
             <div class="flex flex-col items-center">
               <span
                 class="text-xs text-primary font-bold uppercase tracking-widest mb-2"
+                data-i18n="internships.applyEmailLabel"
                 >Apply via Email</span
               >
               <a
@@ -233,7 +238,7 @@ const internshipRoles = [
             href="mailto:hrga@dharmaputrainterior.co.id?subject=Internship Application - [Position Name]"
             class="inline-flex items-center gap-4 bg-primary text-white px-10 py-5 rounded-sm font-bold hover:bg-white hover:text-secondary transition-all tracking-[0.2em] text-sm uppercase"
           >
-            Send Application Email
+            <span data-i18n="internships.sendEmailBtn">Send Application Email</span>
             <span class="material-icons-outlined">send</span>
           </a>
         </div>

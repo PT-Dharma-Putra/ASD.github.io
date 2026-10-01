@@ -37,7 +37,10 @@
             </span>
           </div>
         </a>
-        <p class="text-white/40 text-xs leading-relaxed max-w-sm">
+        <p
+          class="text-white/40 text-xs leading-relaxed max-w-sm"
+          data-i18n="footer.desc"
+        >
           A C4.0 Interior Design and Furniture Manufacturing company
           specializing in high-quality, long-lasting furniture for large-scale
           projects.
@@ -65,6 +68,7 @@
       <div class="space-y-6">
         <h4
           class="font-display font-bold text-[10px] uppercase tracking-[0.3em] text-white/90"
+          data-i18n="footer.navTitle"
         >
           Navigation
         </h4>
@@ -77,7 +81,7 @@
                   class="footer-link group flex items-center gap-2 text-xs text-white/40 hover:text-white transition-colors duration-300"
                 >
                   <span class="w-0 group-hover:w-3 h-[1px] bg-primary transition-all duration-300 overflow-hidden" />
-                  {item}
+                  <span data-i18n={`footer.nav${item}`}>{item}</span>
                 </a>
               </li>
             ))
@@ -101,6 +105,7 @@
       <div class="lg:col-span-2 space-y-6 lg:pl-12 border-l border-white/5">
         <h4
           class="font-display font-bold text-[10px] uppercase tracking-[0.3em] text-white/90"
+          data-i18n="footer.hqTitle"
         >
           The Headquarters
         </h4>
@@ -131,10 +136,32 @@
               <div>
                 <p
                   class="text-[8px] font-bold uppercase tracking-widest text-white/20"
+                  data-i18n="footer.callUs"
                 >
                   Call Us
                 </p>
                 <p class="text-xs font-medium">+62 811-2850-7788</p>
+              </div>
+            </a>
+            <a
+              href="https://wa.me/6281584142296"
+              class="flex items-center gap-3 text-white/40 hover:text-white transition-colors group"
+            >
+              <div
+                class="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-primary/10 group-hover:border-primary/50 transition-all duration-500"
+              >
+                <span class="material-icons-outlined text-primary text-base"
+                  >phone</span
+                >
+              </div>
+              <div>
+                <p
+                  class="text-[8px] font-bold uppercase tracking-widest text-white/20"
+                  data-i18n="footer.callUs"
+                >
+                  Call Us
+                </p>
+                <p class="text-xs font-medium">+62 815-8414-2296</p>
               </div>
             </a>
             <a
@@ -151,6 +178,7 @@
               <div>
                 <p
                   class="text-[8px] font-bold uppercase tracking-widest text-white/20"
+                  data-i18n="footer.emailUs"
                 >
                   Email Us
                 </p>
@@ -168,12 +196,16 @@
     <div
       class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4"
     >
-      <p class="text-[9px] font-bold uppercase tracking-[0.3em] text-white/20">
+      <p
+        class="text-[9px] font-bold uppercase tracking-[0.3em] text-white/20"
+        data-i18n="footer.copyright"
+      >
         © 2026 ABHIJATI SAHAR DHARMA. ALL RIGHTS RESERVED.
       </p>
       <div class="flex gap-6">
         <p
           class="text-[9px] font-bold uppercase tracking-[0.3em] text-white/10 italic"
+          data-i18n="footer.tagline"
         >
           Crafting Professional Environments
         </p>
